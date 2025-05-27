@@ -1,0 +1,182 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Video background */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.circle-progress {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.circle-progress svg {
+  transform: rotate(-90deg);
+}
+
+.circle-progress circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.circle-bg {
+  stroke: #ddd;
+}
+
+.circle-bar {
+  stroke: #00f2fe;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.message {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.task-counter {
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.add-btn {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: #00f2fe;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 16px;
+}
+
+.btn-clear {
+  margin-top: 10px;
+  background: rgba(255, 0, 0, 0.4);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.quote-box {
+  margin-top: 15px;
+  font-size: 13px;
+  font-style: italic;
+  color: #f0f0f0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+/* Confetti Effect */
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
+}
+
+.confetti > div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confetti 1.5s infinite linear;
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}

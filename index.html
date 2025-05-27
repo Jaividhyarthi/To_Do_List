@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/new.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="container">
+    <div class="circle-progress">
+      <svg width="120" height="120">
+        <circle class="circle-bg" cx="60" cy="60" r="50" />
+        <circle class="circle-bar" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="314" />
+      </svg>
+      <div class="progress-text">0%</div>
+    </div>
+    <div class="message">Let's get started!</div>
+    <div class="task-counter">0 tasks</div>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <button class="add-btn" onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+    <button class="btn-clear" onclick="clearAllTasks()">Clear All Tasks</button>
+    <div class="quote-box" id="quoteBox"></div>
+  </div>
+
+  <div class="confetti" id="confetti"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
